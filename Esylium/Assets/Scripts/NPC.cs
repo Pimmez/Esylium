@@ -5,7 +5,12 @@ using System;
 
 public class NPC : MonoBehaviour
 {
-	public static Action ActivateDialogueEvent;
+	private DialogueTrigger dialogueTrigger;
+
+	private void Awake()
+	{
+		dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+	}
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
@@ -13,10 +18,7 @@ public class NPC : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.E))
 			{
-				if (ActivateDialogueEvent != null)
-				{
-					ActivateDialogueEvent();
-				}
+				dialogueTrigger.TriggerDialogue();
 			}
 		}
 	}

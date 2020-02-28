@@ -6,18 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
 	public Dialogue dialogue;
 
-	private void TriggerDialogue()
+	public void TriggerDialogue()
 	{
 		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-	}
-
-	private void OnEnable()
-	{
-		NPC.ActivateDialogueEvent += TriggerDialogue;
-	}
-
-	private void OnDisable()
-	{
-		NPC.ActivateDialogueEvent -= TriggerDialogue;
 	}
 }

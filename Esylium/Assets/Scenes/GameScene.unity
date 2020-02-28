@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &27691256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -217,12 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fb8f1e159686342a010d8c4fbda049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Jake
-    sentences:
-    - "hoi ik ben jake\t"
-    - leuk dit
-    - genoeg gepraat
+  dialogue: {fileID: 11400000, guid: db8f75a44121cd342865378ba77345a2, type: 2}
 --- !u!114 &27691259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,13 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fb8f1e159686342a010d8c4fbda049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Joanne
-    sentences:
-    - "hoihoi\t"
-    - oke dan
-    - dag hoor
-    - dit was joanne
+  dialogue: {fileID: 11400000, guid: 17c32f48e08ecdc4588a68ba1cbb50a3, type: 2}
 --- !u!114 &468459902
 MonoBehaviour:
   m_ObjectHideFlags: 0
