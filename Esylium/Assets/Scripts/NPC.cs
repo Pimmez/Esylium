@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour
 
 	private void Awake()
 	{
-		dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+		dialogueTrigger = GetComponent<DialogueTrigger>();
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
