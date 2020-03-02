@@ -6,6 +6,7 @@ using System;
 public class NPC : MonoBehaviour
 {
 	private DialogueTrigger dialogueTrigger;
+	public Dialogue dialogue;
 
 	private void Awake()
 	{
@@ -16,10 +17,20 @@ public class NPC : MonoBehaviour
 	{
 		if (collision.gameObject.tag == Tags.PLAYER)
 		{
-			if (Input.GetKeyDown(KeyCode.E))
+			if(dialogue.isTalkable)
 			{
-				dialogueTrigger.TriggerDialogue();
+				Debug.Log("Let's talk");
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					dialogueTrigger.TriggerDialogue();
+				}
 			}
+			else
+			{
+				Debug.Log("can't talk");
+				return;
+			}
+			
 		}
 	}
 }

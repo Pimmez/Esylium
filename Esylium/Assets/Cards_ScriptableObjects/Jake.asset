@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Jake
   m_EditorClassIdentifier: 
   name: Jake
+  isTalkable: 1
   sentences:
   - asddd
   - ddddddddddddddddddddddd
