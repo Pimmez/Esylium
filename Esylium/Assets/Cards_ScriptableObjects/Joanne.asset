@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Joanne
   m_EditorClassIdentifier: 
   name: Joanne
+  isTalkable: 1
   sentences:
-  - dfdsfsd
-  - okikookikokikoki
-  - jahjashfdsahfsdhfkjshkdf
+  - "Hey Alejandra, did you hear about this new artificial arm that they\u2019re
+    displaying? Don\u2019t you want to see it too?\u201D\n"

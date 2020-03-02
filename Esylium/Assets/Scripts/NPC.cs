@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class NPC : MonoBehaviour
 {
-	private DialogueTrigger dialogueTrigger;
 	public Dialogue dialogue;
 
+	[SerializeField] private TMP_Text inRangeText;
+	private DialogueTrigger dialogueTrigger;
+	
 	private void Awake()
 	{
 		dialogueTrigger = GetComponent<DialogueTrigger>();
+	}
+
+	private void Start()
+	{
+		inRangeText.enabled = false;
 	}
 
 	private void OnTriggerStay2D(Collider2D collision)
@@ -19,6 +27,8 @@ public class NPC : MonoBehaviour
 		{
 			if(dialogue.isTalkable)
 			{
+				inRangeText.enabled = true;
+
 				Debug.Log("Let's talk");
 				if (Input.GetKeyDown(KeyCode.E))
 				{
@@ -30,7 +40,14 @@ public class NPC : MonoBehaviour
 				Debug.Log("can't talk");
 				return;
 			}
-			
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		{
+			inRangeText.enabled = false;
+			return;
 		}
 	}
 }

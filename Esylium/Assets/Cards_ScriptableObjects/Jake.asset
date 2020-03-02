@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Jake
   m_EditorClassIdentifier: 
   name: Jake
-  isTalkable: 1
+  isTalkable: 0
   sentences:
-  - asddd
-  - ddddddddddddddddddddddd
-  - gggggggggggggggggggg
+  - Oh, you want to see the showcase of the new artificial arm? You can go, but you
+    must come home before 6 PM. Let me open the gate for you.
