@@ -7,10 +7,9 @@ using TMPro;
 public class NPC : MonoBehaviour
 {
 	public Dialogue dialogue;
-
 	[SerializeField] private TMP_Text inRangeText;
 	private DialogueTrigger dialogueTrigger;
-	
+
 	private void Awake()
 	{
 		dialogueTrigger = GetComponent<DialogueTrigger>();

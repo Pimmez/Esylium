@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue _dialogue)
 	{
+		BasicMovement.Instance.CanWalk = false;
 		HUDDialogue.SetActive(true);
 
 		Debug.Log("Starting Conversation With " + _dialogue.name);
@@ -43,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
 	private void EndDialogue()
 	{
+		BasicMovement.Instance.CanWalk = true;
 		HUDDialogue.SetActive(false);
 	}
 }
