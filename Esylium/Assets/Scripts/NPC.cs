@@ -9,10 +9,14 @@ public class NPC : MonoBehaviour
 	public Dialogue dialogue;
 	[SerializeField] private TMP_Text inRangeText;
 	private DialogueTrigger dialogueTrigger;
+	//private AccesInk accesInk;
+	[SerializeField] private GameObject HUDDialogue = null;
+
 
 	private void Awake()
 	{
-		dialogueTrigger = GetComponent<DialogueTrigger>();
+		//accesInk = GetComponent<AccesInk>();
+		//dialogueTrigger = GetComponent<DialogueTrigger>();
 	}
 
 	private void Start()
@@ -28,15 +32,17 @@ public class NPC : MonoBehaviour
 			{
 				inRangeText.enabled = true;
 
-				Debug.Log("Let's talk");
+				//Debug.Log("Let's talk");
 				if (Input.GetKeyDown(KeyCode.E))
 				{
-					dialogueTrigger.TriggerDialogue();
+					HUDDialogue.SetActive(true);
+					//accesInk.StartStory();
+					//dialogueTrigger.TriggerDialogue();
 				}
 			}
 			else
 			{
-				Debug.Log("can't talk");
+				//Debug.Log("can't talk");
 				return;
 			}
 		}
