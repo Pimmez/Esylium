@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Jake
   m_EditorClassIdentifier: 
   name: Jake
-  isTalkable: 0
-  sentences:
-  - Oh, you want to see the showcase of the new artificial arm? You can go, but you
-    must come home before 6 PM. Let me open the gate for you.
+  INKJSONFILE: {fileID: 4900000, guid: 34cc23e075914544a967356d5e7b1219, type: 3}
+  bustSprite: {fileID: 0}

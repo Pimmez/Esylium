@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Joanne
   m_EditorClassIdentifier: 
   name: Joanne
-  isTalkable: 1
-  sentences:
-  - "Hey Alejandra, did you hear about this new artificial arm that they\u2019re
-    displaying? Don\u2019t you want to see it too?\u201D\n"
+  INKJSONFILE: {fileID: 4900000, guid: 34cc23e075914544a967356d5e7b1219, type: 3}
+  bustSprite: {fileID: 0}

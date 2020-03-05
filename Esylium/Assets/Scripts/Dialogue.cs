@@ -6,10 +6,6 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
 	public string name;
-
-	public bool isTalkable;
-	public bool canOpenGate;
-
-	[TextArea(3, 10)]
-	public List<string> sentences = new List<string>();
+	public TextAsset INKJSONFILE;
+	public Sprite bustSprite;
 }

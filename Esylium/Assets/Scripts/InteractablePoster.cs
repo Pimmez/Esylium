@@ -10,10 +10,6 @@ public class InteractablePoster : MonoBehaviour
 	{
 		gameObject.transform.position = new Vector3(-1.22f, 6.5f, 0);
 		gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 1);
-		if(dialogue != null)
-		{
-			dialogue.isTalkable = true;
-		}
 	}
 
 	private void OnTriggerStay2D(Collider2D other)
