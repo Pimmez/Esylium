@@ -4,24 +4,48 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
+	private static BasicMovement instance;
+	public static BasicMovement Instance { get {return instance; } }
+	
+
 	[SerializeField] private Animator anim;
 	[SerializeField] private float movementSpeed;
 	[SerializeField] private GameObject player;
 
+	public bool CanWalk { get { return canWalk; } set { canWalk = value; } }
+	private bool canWalk = true;
+
 	private void Awake()
 	{
+		if(instance != null && instance != this)
+		{
+			Destroy(gameObject);
+		}
+		else
+		{
+			instance = this;
+		}
+
 		anim = GetComponentInChildren<Animator>();
 	}
 
 	private void Update()
 	{
-		if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+		if(canWalk)
 		{
-			Movement();
+			if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+			{
+				Movement();
+			}
+			else
+			{
+				anim.SetBool("isWalking", false);
+			}
 		}
 		else
 		{
 			anim.SetBool("isWalking", false);
+			return;
 		}
 	}
         
