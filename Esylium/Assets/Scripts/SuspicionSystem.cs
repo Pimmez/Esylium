@@ -21,7 +21,7 @@ public class SuspicionSystem : MonoBehaviour
 			slider.value = Mathf.Lerp(slider.value, sliderValue, delta * Time.deltaTime);
 			//slider.value = Mathf.MoveTowards(slider.value, sliderValue, delta * Time.deltaTime);
 
-			//Slidervalue will count in miliseconds on and on without reaching his destination. After a certain point we will lock it to an even number.
+			// Slidervalue will count in miliseconds on and on without reaching his destination. After a certain point we will lock it to an even number.
 			if(slider.value >= (sliderValue - 0.001))
 			{
 				slider.value = sliderValue;
@@ -32,6 +32,7 @@ public class SuspicionSystem : MonoBehaviour
 
 	private void RaiseSuspicionSlider(string _suspicionTag)
 	{
+		sliderValue += 1;
 		canChange = true;
 	}
 
