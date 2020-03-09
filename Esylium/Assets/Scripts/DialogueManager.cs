@@ -9,6 +9,12 @@ public class DialogueManager : MonoBehaviour
 {
 	public static event Action<Story> OnCreateStory;
 
+	public static Action<string> SuspicionTagEvent;
+
+	//SuspicionTags List
+	private List<string> suspicionTags = new List<string>();
+
+
 	private TextAsset inkJSONAsset = null;
 	public Story story;
 
@@ -56,6 +62,19 @@ public class DialogueManager : MonoBehaviour
 			string text = story.Continue();
 			// This removes any white space from the text.
 			text = text.Trim();
+
+			//Loads the suspicion-tags in a list.
+			suspicionTags = story.currentTags;
+
+			//Loads all the suspicion-tags and pushes them through an event to SuspicionSystem;
+			for (int i = 0; i < suspicionTags.Count; i++)
+			{
+				if (SuspicionTagEvent != null)
+				{ 
+					SuspicionTagEvent(suspicionTags[i]);
+				}
+			}
+
 			// Display the text on screen!
 			CreateContentView(text);
 		}
@@ -68,7 +87,8 @@ public class DialogueManager : MonoBehaviour
 				Choice choice = story.currentChoices[i];
 				Button button = CreateChoiceView(choice.text.Trim());
 				// Tell the button what to do when we press it
-				button.onClick.AddListener(delegate {
+				button.onClick.AddListener(delegate
+				{
 					OnClickChoiceButton(choice);
 				});
 			}
@@ -77,7 +97,8 @@ public class DialogueManager : MonoBehaviour
 		else
 		{
 			Button choice = CreateChoiceView("End of conversation.");
-			choice.onClick.AddListener(delegate {
+			choice.onClick.AddListener(delegate
+			{
 				RemoveChildren();
 			});
 		}

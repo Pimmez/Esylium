@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
+using System;
 
 public class InkTestingScript : MonoBehaviour
 {
+	public static Action<string> SuspicionTagEvent;
+
+	//Audio
+	[SerializeField] private List<string> suspicionTags = new List<string>();
+
 	public TextAsset inkJSON = null;
 	public Story story;
 	public Text textPrefab;
