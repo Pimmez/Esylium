@@ -1,0 +1,2 @@
+“Seems you are quite suited for Anti-L.A.B., but there are still 2 things left to do for you. The next thing I want you to do is retrieve a document from the “I Love Robots” store. We found that they have information regarding the production of those robots. One of us saw a L.A.B. worker put it behind the counter. Make sure you don’t get caught.”
+-> DONE
