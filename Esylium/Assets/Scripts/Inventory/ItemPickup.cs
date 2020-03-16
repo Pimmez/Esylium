@@ -14,9 +14,8 @@ public class ItemPickup : MonoBehaviour
 
 	private void CheckNearObjects()
 	{
-		//Collider2D[] objects = Physics2D.OverlapCircle(transform.position, interactionRange);
+		Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, interactionRange);
 
-		/*
 		foreach (Collider2D col in objects)
 		{
 			if (col.tag == Tags.PLAYER)
@@ -24,7 +23,6 @@ public class ItemPickup : MonoBehaviour
 				PickUp();
 			}
 		}
-		*/
 	}
 
 	private void PickUp()
