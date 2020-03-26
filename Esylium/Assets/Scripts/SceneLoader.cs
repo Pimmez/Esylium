@@ -27,6 +27,8 @@ public class SceneLoader : MonoBehaviour
 	}
 	#endregion
 
+	[SerializeField] private GameObject canvasMenu = null;
+
 	public void StartGame(int _sceneIndex)
 	{
 		SceneManager.LoadScene(_sceneIndex);
@@ -40,5 +42,17 @@ public class SceneLoader : MonoBehaviour
 	public void SwitchToScene(int _sceneIndex)
 	{
 		SceneManager.LoadSceneAsync(_sceneIndex);
+	}
+
+	public void ShowCredits(GameObject _creditsGameObject)
+	{
+		_creditsGameObject.SetActive(true);
+		canvasMenu.SetActive(false);
+	}
+
+	public void HideCredits(GameObject _creditsGameObject)
+	{
+		_creditsGameObject.SetActive(false);
+		canvasMenu.SetActive(true);
 	}
 }

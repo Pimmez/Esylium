@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class NPCTest : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class NPCTest : MonoBehaviour
 	[SerializeField] private DialogueManager dialogueManager;
 	[SerializeField] private TMP_Text inRangeText = null;
 	[SerializeField] private GameObject HUDDialogue = null;
+	[SerializeField] private Image NPCBust = null;
+	[SerializeField] private Text NPCName = null;
 
 	private void Awake()
 	{
@@ -24,6 +27,9 @@ public class NPCTest : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.E))
 			{
 				HUDDialogue.SetActive(true);
+				NPCBust.sprite = dialogue.bustSprite;
+				NPCName.text = dialogue.name;
+
 				dialogueManager.StartStory(dialogue.INKJSONFILE);
 			}
 			else
