@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Joanne
   INKJSONFILE: {fileID: 4900000, guid: b9eb2c56abcced640a6b3795a2047c77, type: 3}
-  bustSprite: {fileID: 0}
+  bustSprite: {fileID: 21300000, guid: 438779f83f01a034baf4b6f93ca4fa62, type: 3}
