@@ -8,4 +8,5 @@ public class Dialogue : ScriptableObject
 	public string name;
 	public TextAsset INKJSONFILE;
 	public Sprite bustSprite;
+	public bool isTalkable;
 }

@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
 	private TextAsset inkJSONAsset = null;
 	public Story story;
 
+	public GameObject HUDDialogueImages = null;
+
 	// UI Prefabs
 	[SerializeField] private Text textPrefab = null;
 	[SerializeField] private Button buttonPrefab = null;
@@ -51,6 +53,8 @@ public class DialogueManager : MonoBehaviour
 	{
 		// Remove all the UI on screen
 		RemoveChildren();
+
+		HUDDialogueImages.SetActive(true);
 
 		tempTextPanel = Instantiate(textPanel) as GameObject;
 		tempTextPanel.transform.SetParent(HUDDialogue.transform, false);
@@ -99,6 +103,7 @@ public class DialogueManager : MonoBehaviour
 			Button choice = CreateChoiceView("End of conversation.");
 			choice.onClick.AddListener(delegate
 			{
+				HUDDialogueImages.SetActive(false);
 				RemoveChildren();
 			});
 		}
