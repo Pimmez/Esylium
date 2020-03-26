@@ -24,11 +24,11 @@ MonoBehaviour:
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: ae2dd790f5eeae34e9aec5d88172c302, type: 3}
     jsonAssetPath: {fileID: 0}
-    jsonAsset: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: fac58fc16d58a6242a8dd046bdeebcc6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 39a7204140fddcc499209146e9154ff7, type: 3}
     jsonAssetPath: {fileID: 0}
-    jsonAsset: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 957008b964f51f14bb36166c5bb757c1, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 74f1487290eef3d4188a593118133be2, type: 3}
     jsonAssetPath: {fileID: 0}
