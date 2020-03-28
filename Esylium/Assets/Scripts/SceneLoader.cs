@@ -16,18 +16,14 @@ public class SceneLoader : MonoBehaviour
 			return;
 		}
 		instance = this;
-
-		GameObject[] objs = GameObject.FindGameObjectsWithTag(Tags.GAMECONTROLLER);
-
-		if (objs.Length > 1)
-		{
-			Destroy(this.gameObject);
-		}
-		DontDestroyOnLoad(this.gameObject);
 	}
 	#endregion
 
 	[SerializeField] private GameObject canvasMenu = null;
+
+	[SerializeField] private GameObject ingameMenu = null;
+	[SerializeField] private GameObject questlog = null;
+	[SerializeField] private GameObject inventorySystem = null;
 
 	public void StartGame(int _sceneIndex)
 	{
@@ -44,15 +40,21 @@ public class SceneLoader : MonoBehaviour
 		SceneManager.LoadSceneAsync(_sceneIndex);
 	}
 
-	public void ShowCredits(GameObject _creditsGameObject)
+	public void OnResumeClick()
 	{
-		_creditsGameObject.SetActive(true);
-		canvasMenu.SetActive(false);
+		ingameMenu.SetActive(false);
+		questlog.SetActive(true);
+		BasicMovement.Instance.CanWalk = true;
 	}
 
-	public void HideCredits(GameObject _creditsGameObject)
+	private void Update()
 	{
-		_creditsGameObject.SetActive(false);
-		canvasMenu.SetActive(true);
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			BasicMovement.Instance.CanWalk = false;
+			ingameMenu.SetActive(true);
+			questlog.SetActive(false);
+			inventorySystem.SetActive(false);
+		}
 	}
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Poster
   m_EditorClassIdentifier: 
   title: Poster of Doom
-  icon: {fileID: 21300000, guid: 2a362bba1ca42e54abc47f4e7b076a69, type: 3}
+  icon: {fileID: 21300000, guid: cd16009baf13c1147b217cf33564d6ab, type: 3}
   description: Don't look at it, you will be cursed

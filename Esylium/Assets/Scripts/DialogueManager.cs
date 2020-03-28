@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField] private GameObject panel = null;
 	[SerializeField] private GameObject textPanel = null;
 	[SerializeField] private GameObject HUDDialogue = null;
+	[SerializeField] private GameObject QuestLog = null;
 	private GameObject tempPanel;
 	private GameObject tempTextPanel;
 
@@ -105,6 +106,9 @@ public class DialogueManager : MonoBehaviour
 			{
 				HUDDialogueImages.SetActive(false);
 				RemoveChildren();
+				QuestLog.SetActive(true);
+				BasicMovement.Instance.CanWalk = true;
+
 			});
 		}
 	}

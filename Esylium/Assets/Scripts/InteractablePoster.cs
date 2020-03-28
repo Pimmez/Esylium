@@ -5,22 +5,37 @@ using UnityEngine;
 public class InteractablePoster : MonoBehaviour
 {
 	[SerializeField] private Dialogue dialogue = null;
+	[SerializeField] private GameObject posterImage;
+	[SerializeField] private GameObject inRangeText = null;
 
 	public void OnPosterClick()
 	{
-		gameObject.transform.position = new Vector3(-1.22f, 6.5f, 0);
-		gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 1);
+		posterImage.SetActive(false);
 	}
 
 	private void OnTriggerStay2D(Collider2D other)
 	{
-		if(other.gameObject.tag == Tags.PLAYER)
+		if (other.CompareTag(Tags.PLAYER))
 		{
-			if(Input.GetKeyDown(KeyCode.E))
+			inRangeText.SetActive(true);
+
+			if (Input.GetKeyDown(KeyCode.E))
 			{
-				gameObject.transform.position = new Vector3(0, 0, 0);
-				gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+				//BasicMovement.Instance.CanWalk = false;
+				posterImage.SetActive(true);
+				dialogue.isTalkable = true;
+
+				QuestLog.instance.questlogText.text = "- Talk to Jake near the booth.";
+				QuestLog.instance.UpdatedQuestLog();
 			}
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		{
+			inRangeText.SetActive(false);
+			return;
 		}
 	}
 }

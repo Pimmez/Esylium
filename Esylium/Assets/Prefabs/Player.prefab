@@ -123,6 +123,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.062958054
       objectReference: {fileID: 0}
+    - target: {fileID: 1482902262933280108, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2299968803522812688, guid: e907a75c66bc9bf40b0d98548fcd9471,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -143,6 +148,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.99992746
       objectReference: {fileID: 0}
+    - target: {fileID: 4006883803075231308, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4137390096681081248, guid: e907a75c66bc9bf40b0d98548fcd9471,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -152,6 +162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.12251618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553220556060656168, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4757719648980838765, guid: e907a75c66bc9bf40b0d98548fcd9471,
         type: 3}
@@ -243,6 +258,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.99998146
       objectReference: {fileID: 0}
+    - target: {fileID: 6167819707270281440, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6361438070047849666, guid: e907a75c66bc9bf40b0d98548fcd9471,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -312,6 +332,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -64.867004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155187923911140790, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825985710736095081, guid: e907a75c66bc9bf40b0d98548fcd9471,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9083607208617450759, guid: e907a75c66bc9bf40b0d98548fcd9471,
         type: 3}
